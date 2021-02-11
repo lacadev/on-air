@@ -1,0 +1,14 @@
+[Unit]
+Description=On-air service
+
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/on-air
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
